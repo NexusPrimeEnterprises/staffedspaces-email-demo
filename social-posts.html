@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StaffedSpaces Social Media Posts</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #1a1a2e; padding: 40px; min-height: 100vh; }
+        h1 { color: #D4A853; text-align: center; margin-bottom: 40px; font-size: 28px; }
+        .posts-container { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; }
+        .post-wrapper { text-align: center; }
+        .post-label { color: #fff; font-size: 14px; margin-bottom: 16px; opacity: 0.7; }
+        
+        /* POST 1 */
+        .post-1 { width: 1080px; height: 1350px; background: linear-gradient(180deg, #0f2424 0%, #1a3a3a 50%, #0f2424 100%); overflow: hidden; position: relative; transform: scale(0.35); transform-origin: top center; margin-bottom: -875px; }
+        .post-1 .header { padding: 60px 60px 40px; text-align: center; }
+        .post-1 .logo { width: 180px; margin-bottom: 40px; }
+        .post-1 .hook { font-size: 72px; font-weight: 900; color: #ffffff; line-height: 1.1; margin-bottom: 24px; }
+        .post-1 .hook span { color: #D4A853; }
+        .post-1 .subtext { font-size: 32px; color: rgba(255,255,255,0.8); max-width: 800px; margin: 0 auto; }
+        .post-1 .image-section { padding: 40px 60px; }
+        .post-1 .image-section img { width: 100%; border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+        .post-1 .stats-bar { display: flex; justify-content: space-around; padding: 50px 60px; background: rgba(212, 168, 83, 0.1); border-top: 2px solid rgba(212, 168, 83, 0.3); border-bottom: 2px solid rgba(212, 168, 83, 0.3); }
+        .post-1 .stat-item { text-align: center; }
+        .post-1 .stat-number { font-size: 64px; font-weight: 900; color: #D4A853; }
+        .post-1 .stat-label { font-size: 22px; color: rgba(255,255,255,0.7); margin-top: 8px; }
+        .post-1 .cta-section { padding: 50px 60px; text-align: center; }
+        .post-1 .cta-text { font-size: 36px; color: #fff; margin-bottom: 30px; }
+        .post-1 .cta-button { display: inline-block; background: linear-gradient(135deg, #D4A853, #c49643); color: #1a1a2e; padding: 24px 60px; border-radius: 60px; font-size: 28px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+        .post-1 .footer { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px; background: rgba(0,0,0,0.3); text-align: center; }
+        .post-1 .tagline { font-size: 20px; color: #D4A853; letter-spacing: 4px; font-weight: 600; }
+        
+        /* POST 2 */
+        .post-2 { width: 1080px; height: 1350px; background: #ffffff; overflow: hidden; position: relative; transform: scale(0.35); transform-origin: top center; margin-bottom: -875px; }
+        .post-2 .hero-image { width: 100%; height: 500px; object-fit: cover; }
+        .post-2 .content { padding: 50px 60px; }
+        .post-2 .badge { display: inline-block; background: #2D6A6A; color: white; padding: 12px 28px; border-radius: 30px; font-size: 18px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; }
+        .post-2 .headline { font-size: 64px; font-weight: 900; color: #1a3a3a; line-height: 1.1; margin-bottom: 24px; }
+        .post-2 .headline span { color: #D4A853; }
+        .post-2 .body-text { font-size: 28px; color: #555; line-height: 1.5; margin-bottom: 40px; }
+        .post-2 .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+        .post-2 .feature { background: linear-gradient(145deg, #f8f9fa, #fff); border: 2px solid #e8eeee; border-radius: 20px; padding: 30px 20px; text-align: center; }
+        .post-2 .feature-icon { font-size: 48px; margin-bottom: 16px; }
+        .post-2 .feature-title { font-size: 22px; font-weight: 700; color: #1a3a3a; }
+        .post-2 .quote-box { background: linear-gradient(135deg, #2D6A6A, #1a3a3a); border-radius: 24px; padding: 40px; position: relative; }
+        .post-2 .quote-box::before { content: '"'; position: absolute; top: 10px; left: 30px; font-size: 100px; color: rgba(212, 168, 83, 0.3); font-family: Georgia, serif; }
+        .post-2 .quote-text { font-size: 28px; color: #fff; font-style: italic; position: relative; z-index: 1; }
+        .post-2 .footer { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 60px; background: #1a3a3a; display: flex; justify-content: space-between; align-items: center; }
+        .post-2 .footer-logo { height: 50px; }
+        .post-2 .footer-tagline { color: #D4A853; font-size: 18px; letter-spacing: 3px; font-weight: 600; }
+        
+        /* POST 3 */
+        .post-3 { width: 1080px; height: 1350px; background: linear-gradient(180deg, #2D6A6A 0%, #1a3a3a 100%); overflow: hidden; position: relative; transform: scale(0.35); transform-origin: top center; margin-bottom: -875px; }
+        .post-3 .top-bar { padding: 40px 60px; display: flex; justify-content: space-between; align-items: center; }
+        .post-3 .logo { height: 60px; }
+        .post-3 .live-badge { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.15); padding: 12px 24px; border-radius: 30px; }
+        .post-3 .live-dot { width: 16px; height: 16px; background: #ff4444; border-radius: 50%; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .post-3 .live-text { color: white; font-size: 18px; font-weight: 600; letter-spacing: 2px; }
+        .post-3 .main-content { padding: 30px 60px; text-align: center; }
+        .post-3 .big-headline { font-size: 80px; font-weight: 900; color: white; line-height: 1.0; margin-bottom: 20px; }
+        .post-3 .big-headline .gold { color: #D4A853; display: block; font-size: 90px; }
+        .post-3 .subtitle { font-size: 28px; color: rgba(255,255,255,0.8); margin-bottom: 40px; }
+        .post-3 .person-section { display: flex; gap: 30px; padding: 0 60px; align-items: center; }
+        .post-3 .person-image { width: 400px; height: 500px; object-fit: cover; border-radius: 24px; border: 4px solid rgba(212, 168, 83, 0.5); }
+        .post-3 .person-content { flex: 1; text-align: left; }
+        .post-3 .testimonial { font-size: 32px; color: white; font-style: italic; line-height: 1.4; margin-bottom: 30px; position: relative; padding-left: 30px; border-left: 4px solid #D4A853; }
+        .post-3 .results-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .post-3 .result-item { background: rgba(255,255,255,0.1); border-radius: 16px; padding: 24px; text-align: center; }
+        .post-3 .result-number { font-size: 42px; font-weight: 900; color: #D4A853; }
+        .post-3 .result-label { font-size: 16px; color: rgba(255,255,255,0.7); margin-top: 4px; }
+        .post-3 .bottom-cta { position: absolute; bottom: 0; left: 0; right: 0; padding: 40px 60px; background: rgba(0,0,0,0.3); display: flex; justify-content: space-between; align-items: center; }
+        .post-3 .cta-left { color: white; font-size: 24px; }
+        .post-3 .cta-right { background: #D4A853; color: #1a1a2e; padding: 20px 40px; border-radius: 40px; font-weight: 700; font-size: 22px; }
+        .scale-note { color: rgba(255,255,255,0.5); font-size: 12px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>StaffedSpaces Social Media Posts (1080×1350 Portrait)</h1>
+    <div class="posts-container">
+        <div class="post-wrapper">
+            <div class="post-label">Post 1: The Leverage Effect</div>
+            <div class="post-1">
+                <div class="header">
+                    <img src="https://nexusprimeenterprises.github.io/staffedspaces-logos/logo_gold_400w.png" alt="StaffedSpaces" class="logo">
+                    <h2 class="hook">Invest <span>$150</span><br>Free Up <span>$5,000</span></h2>
+                    <p class="subtext">The math that's changing how smart businesses scale</p>
+                </div>
+                <div class="image-section">
+                    <img src="https://cdn.staffedspaces.com/assets/INF_049_time_freed_vs_cost_invested_scale_roi_balance_16x9.png" alt="ROI">
+                </div>
+                <div class="stats-bar">
+                    <div class="stat-item"><div class="stat-number">30:1</div><div class="stat-label">Cost Ratio</div></div>
+                    <div class="stat-item"><div class="stat-number">40+</div><div class="stat-label">Hours Freed</div></div>
+                    <div class="stat-item"><div class="stat-number">10x</div><div class="stat-label">ROI</div></div>
+                </div>
+                <div class="cta-section">
+                    <p class="cta-text">Your $8,000 expert shouldn't write reports.</p>
+                    <div class="cta-button">Calculate Your ROI →</div>
+                </div>
+                <div class="footer"><div class="tagline">TRANSPARENCY · LEVERAGE · GROWTH</div></div>
+            </div>
+            <div class="scale-note">Scaled to 35% for preview</div>
+        </div>
+        <div class="post-wrapper">
+            <div class="post-label">Post 2: Complete Transparency</div>
+            <div class="post-2">
+                <img src="https://cdn.staffedspaces.com/assets/NB_011_customer_service_representative_headset_smiling_friendly_4x5.png" alt="Support Agent" class="hero-image">
+                <div class="content">
+                    <span class="badge">🔴 Live Monitoring</span>
+                    <h2 class="headline">Stop <span>Hoping.</span><br>Start <span>Knowing.</span></h2>
+                    <p class="body-text">See your entire team work in real-time. Screen monitoring, webcam feeds, digital time tracking — complete visibility, zero guesswork.</p>
+                    <div class="feature-grid">
+                        <div class="feature"><div class="feature-icon">🖥️</div><div class="feature-title">Live Screens</div></div>
+                        <div class="feature"><div class="feature-icon">📹</div><div class="feature-title">Webcam Feeds</div></div>
+                        <div class="feature"><div class="feature-icon">⏱️</div><div class="feature-title">Time Tracking</div></div>
+                    </div>
+                    <div class="quote-box"><p class="quote-text">The difference between hoping and knowing is the difference between anxiety and confidence.</p></div>
+                </div>
+                <div class="footer">
+                    <img src="https://nexusprimeenterprises.github.io/staffedspaces-logos/logo_gold_300w.png" alt="StaffedSpaces" class="footer-logo">
+                    <div class="footer-tagline">TRANSPARENCY · LEVERAGE · GROWTH</div>
+                </div>
+            </div>
+            <div class="scale-note">Scaled to 35% for preview</div>
+        </div>
+        <div class="post-wrapper">
+            <div class="post-label">Post 3: Real Transformation</div>
+            <div class="post-3">
+                <div class="top-bar">
+                    <img src="https://nexusprimeenterprises.github.io/staffedspaces-logos/logo_gold_300w.png" alt="StaffedSpaces" class="logo">
+                    <div class="live-badge"><div class="live-dot"></div><span class="live-text">REAL RESULTS</span></div>
+                </div>
+                <div class="main-content">
+                    <h2 class="big-headline">From 80hr Weeks<br><span class="gold">To Freedom</span></h2>
+                    <p class="subtitle">Real transformation. Real numbers. Real people.</p>
+                </div>
+                <div class="person-section">
+                    <img src="https://cdn.staffedspaces.com/assets/NB_008_security_guard_office_entrance_access_control_professional_1x1.png" alt="Professional" class="person-image">
+                    <div class="person-content">
+                        <p class="testimonial">\"Email from 3 hours to 30 minutes daily. My CRM is better maintained than ever. I finally have time for strategy.\"</p>
+                        <div class="results-grid">
+                            <div class="result-item"><div class="result-number">90%</div><div class="result-label">Time Saved</div></div>
+                            <div class="result-item"><div class="result-number">$150</div><div class="result-label">Monthly Cost</div></div>
+                            <div class="result-item"><div class="result-number">7</div><div class="result-label">Months In</div></div>
+                            <div class="result-item"><div class="result-number">0</div><div class="result-label">Replacements</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-cta">
+                    <div class="cta-left">Your transformation starts here →</div>
+                    <div class="cta-right">Book a Demo</div>
+                </div>
+            </div>
+            <div class="scale-note">Scaled to 35% for preview</div>
+        </div>
+    </div>
+</body>
+</html>
